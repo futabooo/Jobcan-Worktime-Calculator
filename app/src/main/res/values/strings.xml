@@ -1,0 +1,9 @@
+<resources>
+  <string name="app_name">JobcanWorktimeCalculator</string>
+  <string name="label_work_days">労働日数</string>
+  <string name="label_work_time">労働時間</string>
+  <string name="label_holiday">消化済休暇</string>
+  <string name="label_saving_time">貯金</string>
+  <string name="label_estimated_time">1日の目安</string>
+  <string name="divider">/</string>
+</resources>
