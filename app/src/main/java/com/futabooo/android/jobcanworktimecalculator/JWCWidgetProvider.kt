@@ -42,7 +42,7 @@ class JWCWidgetProvider : AppWidgetProvider() {
         val views = RemoteViews(context.packageName, R.layout.jwc_widget).apply {
           setTextViewText(R.id.date, attendance.date)
           setTextViewText(R.id.required_days, attendance.requiredWorkDay)
-          setTextViewText(R.id.required_work_time, attendance.requiredWorkTime)
+          setTextViewText(R.id.required_work_time, attendance.requiredWorkTime())
           setTextViewText(R.id.actual_work_day, attendance.actualWorkDay)
           setTextViewText(R.id.actual_work_time, attendance.actualWorkTime)
           setTextViewText(R.id.holiday, attendance.holiday)
