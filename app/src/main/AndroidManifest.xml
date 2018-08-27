@@ -25,6 +25,8 @@
           android:resource="@xml/jwc_widget_info"
           />
     </receiver>
+
+    <activity android:name=".SettingActivity"/>
   </application>
 
 </manifest>
