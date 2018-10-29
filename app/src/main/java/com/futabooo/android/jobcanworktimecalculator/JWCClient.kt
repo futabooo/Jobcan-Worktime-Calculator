@@ -45,7 +45,7 @@ class JWCClient(private val context: Context) {
   interface JWCService {
 
     @FormUrlEncoded
-    @POST("/login/pc-employee")
+    @POST("/login/pc-employee/old")
     fun login(
         @Field("client_id") clientId: String,
         @Field("email") email: String,
