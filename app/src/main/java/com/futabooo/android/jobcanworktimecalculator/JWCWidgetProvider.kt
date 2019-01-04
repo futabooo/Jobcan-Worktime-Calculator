@@ -7,8 +7,9 @@ import android.content.Context
 import android.content.Intent
 import android.text.TextUtils
 import android.widget.RemoteViews
-import kotlinx.coroutines.experimental.android.UI
-import kotlinx.coroutines.experimental.launch
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 import org.jsoup.Jsoup
 import org.jsoup.nodes.Document
 import java.io.BufferedReader
@@ -24,11 +25,13 @@ class JWCWidgetProvider : AppWidgetProvider() {
 
     internal fun updateAppWidget(context: Context, appWidgetManager: AppWidgetManager, appWidgetId: Int) {
 
-      launch(UI) {
-        val client = JWCClient(context)
+      val client = JWCClient(context)
+      GlobalScope.launch(Dispatchers.Main) {
         // Please insert client_id, email, password
-        client.login("", "", "").await()
-        val responseBody = client.attendance().await()
+        client.login("", "", "")
+            .await()
+        val responseBody = client.attendance()
+            .await()
 
         val html = BufferedReader(InputStreamReader(responseBody.byteStream()))
             .readLines()

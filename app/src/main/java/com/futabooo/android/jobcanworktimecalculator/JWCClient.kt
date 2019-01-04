@@ -4,10 +4,8 @@ import android.content.Context
 import com.franmontiel.persistentcookiejar.PersistentCookieJar
 import com.franmontiel.persistentcookiejar.cache.SetCookieCache
 import com.franmontiel.persistentcookiejar.persistence.SharedPrefsCookiePersistor
-import com.jakewharton.retrofit2.adapter.kotlin.coroutines.experimental.CoroutineCallAdapterFactory
-import kotlinx.coroutines.experimental.CommonPool
-import kotlinx.coroutines.experimental.Deferred
-import kotlinx.coroutines.experimental.withContext
+import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
+import kotlinx.coroutines.Deferred
 import okhttp3.OkHttpClient
 import okhttp3.ResponseBody
 import retrofit2.Retrofit
@@ -28,18 +26,14 @@ class JWCClient(private val context: Context) {
       .client(okHttpClient)
       .build()
 
-  suspend fun login(clientId: String, email: String, password: String): Deferred<ResponseBody> {
-    return withContext(CommonPool) {
-      retrofit.create(JWCService::class.java)
-          .login(clientId = clientId, email = email, password = password)
-    }
+  fun login(clientId: String, email: String, password: String): Deferred<ResponseBody> {
+    return retrofit.create(JWCService::class.java)
+        .login(clientId = clientId, email = email, password = password)
   }
 
-  suspend fun attendance(): Deferred<ResponseBody> {
-    return withContext(CommonPool) {
-      retrofit.create(JWCService::class.java)
-          .attendance()
-    }
+  fun attendance(): Deferred<ResponseBody> {
+    return retrofit.create(JWCService::class.java)
+        .attendance()
   }
 
   interface JWCService {
@@ -47,9 +41,10 @@ class JWCClient(private val context: Context) {
     @FormUrlEncoded
     @POST("/login/pc-employee/old")
     fun login(
-        @Field("client_id") clientId: String,
-        @Field("email") email: String,
-        @Field("password") password: String): Deferred<ResponseBody>
+      @Field("client_id") clientId: String,
+      @Field("email") email: String,
+      @Field("password") password: String
+    ): Deferred<ResponseBody>
 
     @GET("/employee/attendance")
     fun attendance(): Deferred<ResponseBody>
