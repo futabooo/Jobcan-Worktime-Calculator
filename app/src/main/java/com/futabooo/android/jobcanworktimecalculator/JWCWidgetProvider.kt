@@ -29,14 +29,14 @@ class JWCWidgetProvider : AppWidgetProvider() {
       GlobalScope.launch(Dispatchers.Main) {
         // Please insert client_id, email, password
         client.login("", "", "")
-            .await()
+          .await()
         val responseBody = client.attendance()
-            .await()
+          .await()
 
         val html = BufferedReader(InputStreamReader(responseBody.byteStream()))
-            .readLines()
-            .filter(String::isNotBlank)
-            .toList()
+          .readLines()
+          .filter(String::isNotBlank)
+          .toList()
 
         val document = Jsoup.parse(TextUtils.join("", html))
         val attendance = Attendance(document)

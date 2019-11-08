@@ -1,166 +1,166 @@
 <RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/widget_root"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#09C"
-    android:padding="@dimen/widget_margin"
-    >
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/widget_root"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="#09C"
+  android:padding="@dimen/widget_margin"
+  >
 
   <TextView
-      android:id="@+id/date"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_margin="8dp"
-      android:textColor="#ffffff"
-      android:textSize="14sp"
-      android:textStyle="bold"
-      tools:text="2018年7月"
-      />
+    android:id="@+id/date"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:textColor="#ffffff"
+    android:textSize="14sp"
+    android:textStyle="bold"
+    tools:text="2018年7月"
+    />
 
   <TextView
-      android:id="@+id/required_days_label"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_below="@id/date"
-      android:text="@string/label_work_days"
-      style="@style/JWC.TextAppearance.Title.White"
-      />
+    android:id="@+id/required_days_label"
+    style="@style/JWC.TextAppearance.Title.White"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/date"
+    android:text="@string/label_work_days"
+    />
 
   <TextView
-      android:id="@+id/actual_work_day"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_alignBaseline="@id/required_days_label"
-      android:layout_toEndOf="@id/required_days_label"
-      android:textColor="#ffffff"
-      android:textSize="12sp"
-      tools:text="10"
-      />
+    android:id="@+id/actual_work_day"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignBaseline="@id/required_days_label"
+    android:layout_toEndOf="@id/required_days_label"
+    android:textColor="#ffffff"
+    android:textSize="12sp"
+    tools:text="10"
+    />
 
   <TextView
-      android:id="@+id/work_day_divider"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_alignBaseline="@id/required_days_label"
-      android:layout_toEndOf="@id/actual_work_day"
-      android:text="@string/divider"
-      android:textColor="#ffffff"
-      android:textSize="12sp"
-      />
+    android:id="@+id/work_day_divider"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignBaseline="@id/required_days_label"
+    android:layout_toEndOf="@id/actual_work_day"
+    android:text="@string/divider"
+    android:textColor="#ffffff"
+    android:textSize="12sp"
+    />
 
   <TextView
-      android:id="@+id/required_days"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_alignBaseline="@id/required_days_label"
-      android:layout_toEndOf="@id/work_day_divider"
-      android:textColor="#ffffff"
-      android:textSize="12sp"
-      tools:text="20"
-      />
+    android:id="@+id/required_days"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignBaseline="@id/required_days_label"
+    android:layout_toEndOf="@id/work_day_divider"
+    android:textColor="#ffffff"
+    android:textSize="12sp"
+    tools:text="20"
+    />
 
   <TextView
-      android:id="@+id/actual_work_time_label"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_below="@id/required_days_label"
-      android:text="@string/label_work_time"
-      style="@style/JWC.TextAppearance.Title.White"
-      />
+    android:id="@+id/actual_work_time_label"
+    style="@style/JWC.TextAppearance.Title.White"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/required_days_label"
+    android:text="@string/label_work_time"
+    />
 
   <TextView
-      android:id="@+id/actual_work_time"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_alignBaseline="@id/actual_work_time_label"
-      android:layout_toEndOf="@id/actual_work_time_label"
-      android:textColor="#ffffff"
-      android:textSize="12sp"
-      tools:text="80.05"
-      />
+    android:id="@+id/actual_work_time"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignBaseline="@id/actual_work_time_label"
+    android:layout_toEndOf="@id/actual_work_time_label"
+    android:textColor="#ffffff"
+    android:textSize="12sp"
+    tools:text="80.05"
+    />
 
   <TextView
-      android:id="@+id/work_time_divider"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_alignBaseline="@id/actual_work_time_label"
-      android:layout_toEndOf="@id/actual_work_time"
-      android:text="@string/divider"
-      android:textColor="#ffffff"
-      android:textSize="12sp"
-      />
+    android:id="@+id/work_time_divider"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignBaseline="@id/actual_work_time_label"
+    android:layout_toEndOf="@id/actual_work_time"
+    android:text="@string/divider"
+    android:textColor="#ffffff"
+    android:textSize="12sp"
+    />
 
   <TextView
-      android:id="@+id/required_work_time"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_alignBaseline="@id/actual_work_time_label"
-      android:layout_toEndOf="@id/work_time_divider"
-      android:textColor="#ffffff"
-      android:textSize="12sp"
-      tools:text="140"
-      />
+    android:id="@+id/required_work_time"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignBaseline="@id/actual_work_time_label"
+    android:layout_toEndOf="@id/work_time_divider"
+    android:textColor="#ffffff"
+    android:textSize="12sp"
+    tools:text="140"
+    />
 
   <TextView
-      android:id="@+id/holiday_label"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_below="@id/actual_work_time_label"
-      android:text="@string/label_holiday"
-      style="@style/JWC.TextAppearance.Title.White"
-      />
+    android:id="@+id/holiday_label"
+    style="@style/JWC.TextAppearance.Title.White"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/actual_work_time_label"
+    android:text="@string/label_holiday"
+    />
 
   <TextView
-      android:id="@+id/holiday"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_alignBaseline="@id/holiday_label"
-      android:layout_toEndOf="@id/holiday_label"
-      android:textColor="#ffffff"
-      android:textSize="12sp"
-      tools:text="0"
-      />
+    android:id="@+id/holiday"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignBaseline="@id/holiday_label"
+    android:layout_toEndOf="@id/holiday_label"
+    android:textColor="#ffffff"
+    android:textSize="12sp"
+    tools:text="0"
+    />
 
   <TextView
-      android:id="@+id/saving_time_label"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_below="@id/holiday_label"
-      android:text="@string/label_saving_time"
-      style="@style/JWC.TextAppearance.Title.White"
-      />
+    android:id="@+id/saving_time_label"
+    style="@style/JWC.TextAppearance.Title.White"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/holiday_label"
+    android:text="@string/label_saving_time"
+    />
 
   <TextView
-      android:id="@+id/saving_time"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_alignBaseline="@id/saving_time_label"
-      android:layout_toEndOf="@id/saving_time_label"
-      android:textColor="#ffffff"
-      android:textSize="12sp"
-      tools:text="0"
-      />
+    android:id="@+id/saving_time"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignBaseline="@id/saving_time_label"
+    android:layout_toEndOf="@id/saving_time_label"
+    android:textColor="#ffffff"
+    android:textSize="12sp"
+    tools:text="0"
+    />
 
   <TextView
-      android:id="@+id/estimated_time_label"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_below="@id/saving_time_label"
-      android:text="@string/label_estimated_time"
-      style="@style/JWC.TextAppearance.Title.White"
-      />
+    android:id="@+id/estimated_time_label"
+    style="@style/JWC.TextAppearance.Title.White"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/saving_time_label"
+    android:text="@string/label_estimated_time"
+    />
 
   <TextView
-      android:id="@+id/estimated_time"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_alignBaseline="@id/estimated_time_label"
-      android:layout_toEndOf="@id/estimated_time_label"
-      android:textColor="#ffffff"
-      android:textSize="12sp"
-      tools:text="0"
-      />
+    android:id="@+id/estimated_time"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignBaseline="@id/estimated_time_label"
+    android:layout_toEndOf="@id/estimated_time_label"
+    android:textColor="#ffffff"
+    android:textSize="12sp"
+    tools:text="0"
+    />
 
 </RelativeLayout>
